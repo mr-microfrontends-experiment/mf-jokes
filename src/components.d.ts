@@ -8,20 +8,6 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface MfJoke {
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
-    }
 }
 declare global {
     interface HTMLMfJokeElement extends Components.MfJoke, HTMLStencilElement {
@@ -30,37 +16,15 @@ declare global {
         prototype: HTMLMfJokeElement;
         new (): HTMLMfJokeElement;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
-    };
     interface HTMLElementTagNameMap {
         "mf-joke": HTMLMfJokeElement;
-        "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
     interface MfJoke {
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
-    }
     interface IntrinsicElements {
         "mf-joke": MfJoke;
-        "my-component": MyComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -68,7 +32,6 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "mf-joke": LocalJSX.MfJoke & JSXBase.HTMLAttributes<HTMLMfJokeElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
 }
