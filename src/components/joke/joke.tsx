@@ -1,4 +1,4 @@
-import { Component, Host, h, State } from '@stencil/core';
+import { Component, Host, h, State, Prop } from '@stencil/core';
 
 import 'mf-components';
 import { JokeModel, JokeResponse } from '../../models/joke-response.interface';
@@ -9,6 +9,9 @@ import { JokeModel, JokeResponse } from '../../models/joke-response.interface';
   shadow: true,
 })
 export class Joke {
+  @Prop() firstName: string = 'Chuck';
+  @Prop() lastName: string = 'Norris';
+
   @State() private joke: JokeModel;
 
   render() {
@@ -25,7 +28,9 @@ export class Joke {
   }
 
   private async fetchJoke(): Promise<JokeModel> {
-    const response: Response = await fetch('https://api.icndb.com/jokes/random?escape=javascript');
+    const response: Response = await fetch(
+      `https://api.icndb.com/jokes/random?escape=javascript&firstName=${this.firstName}&lastName=${this.lastName}`
+    );
     const data: JokeResponse = await response.json();
 
     return data.value;

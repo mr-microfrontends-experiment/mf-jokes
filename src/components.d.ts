@@ -7,6 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface MfJoke {
+        "firstName": string;
+        "lastName": string;
     }
 }
 declare global {
@@ -22,6 +24,8 @@ declare global {
 }
 declare namespace LocalJSX {
     interface MfJoke {
+        "firstName"?: string;
+        "lastName"?: string;
     }
     interface IntrinsicElements {
         "mf-joke": MfJoke;

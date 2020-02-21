@@ -5,6 +5,14 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property    | Attribute    | Description | Type     | Default    |
+| ----------- | ------------ | ----------- | -------- | ---------- |
+| `firstName` | `first-name` |             | `string` | `'Chuck'`  |
+| `lastName`  | `last-name`  |             | `string` | `'Norris'` |
+
+
 ## Dependencies
 
 ### Depends on
