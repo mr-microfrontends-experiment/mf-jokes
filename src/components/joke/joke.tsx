@@ -25,7 +25,7 @@ export class Joke {
   }
 
   private async fetchJoke(): Promise<JokeModel> {
-    const response: Response = await fetch('https://api.icndb.com/jokes/random');
+    const response: Response = await fetch('https://api.icndb.com/jokes/random?escape=javascript');
     const data: JokeResponse = await response.json();
 
     return data.value;
