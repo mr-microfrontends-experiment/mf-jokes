@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "compile": "stencil build --docs --next",
-    "copy": "cp src/_headers www",
+    "copy": "cp _headers www",
     "prebuild": "npm install",
     "build": "run-s compile copy",
     "start": "stencil build --dev --watch --serve --next",
