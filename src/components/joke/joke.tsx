@@ -22,8 +22,10 @@ export class Joke {
       escape: 'javascript',
       firstName: this.firstName,
       lastName: this.lastName,
-      limitTo: this.categories.length ? JSON.stringify(this.categories) : undefined,
+      limitTo: this.categories.length ? JSON.stringify(this.categories).replace(/"/g, '') : undefined,
     };
+
+    console.log(JSON.stringify(this.categories).replace(/"/g, ''));
 
     return `https://api.icndb.com/jokes/random${hashToUrlParams(params)}`;
   }
