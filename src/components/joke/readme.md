@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property    | Attribute    | Description | Type     | Default    |
-| ----------- | ------------ | ----------- | -------- | ---------- |
-| `firstName` | `first-name` |             | `string` | `'Chuck'`  |
-| `lastName`  | `last-name`  |             | `string` | `'Norris'` |
+| Property     | Attribute    | Description | Type       | Default    |
+| ------------ | ------------ | ----------- | ---------- | ---------- |
+| `categories` | --           |             | `string[]` | `[]`       |
+| `firstName`  | `first-name` |             | `string`   | `'Chuck'`  |
+| `lastName`   | `last-name`  |             | `string`   | `'Norris'` |
 
 
 ## Dependencies

@@ -14,5 +14,13 @@
 
     <h1>Load a Joke for Arthur Dent</h1>
     <mf-joke first-name="Arthur" last-name="Dent"></mf-joke>
+
+    <h1>Load a nerdy Joke</h1>
+    <mf-joke id="nerdy-joke"></mf-joke>
   </body>
+
+  <script>
+    const nerdy = document.querySelector('#nerdy-joke');
+    nerdy.categories = ['nerdy'];
+  </script>
 </html>
