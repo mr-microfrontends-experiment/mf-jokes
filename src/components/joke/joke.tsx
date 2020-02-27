@@ -31,7 +31,7 @@ export class Joke {
   public render() {
     return (
       <Host>
-        <mf-button onOutClick={() => this.doFetchJoke()}>Load new random Joke</mf-button>
+        <mf-button onOutClick={() => this.doFetchJoke()}>Load random Joke</mf-button>
         {this.renderJoke()}
       </Host>
     );
