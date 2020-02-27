@@ -32,6 +32,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "mf-components": "^0.1.1"
+    "mf-components": "^0.1.2"
   }
 }
