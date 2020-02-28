@@ -25,9 +25,11 @@ export class Joke {
       limitTo: this.categories.length ? JSON.stringify(this.categories).replace(/"/g, '') : undefined,
     };
 
-    console.log(JSON.stringify(this.categories).replace(/"/g, ''));
-
     return `https://api.icndb.com/jokes/random${hashToUrlParams(params)}`;
+  }
+
+  public connectedCallback(): void {
+    this.doFetchJoke();
   }
 
   public render() {
